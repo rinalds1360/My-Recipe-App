@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class RecipeDetailsActivity extends AppCompatActivity {
     int id;
 
@@ -28,6 +30,15 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         getWindow().setLayout((int)(width*.92),(int)(height*.97));
 
         findViews();
+
+        Database db = new Database(this);
+
+        // Have done changes here for testing purposes.
+        db.open();
+        textView_meal_method.setText(db.getDescription("efasf"));
+        db.deleteFavorites("efasf");
+        ArrayList<String> search = db.filterFavorites();
+        textView_meal_name.setText(search.toString());
     }
 
     private void findViews() {
