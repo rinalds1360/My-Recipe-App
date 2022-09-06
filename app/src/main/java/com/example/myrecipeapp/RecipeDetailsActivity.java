@@ -39,6 +39,7 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         db.deleteFavorites("efasf");
         ArrayList<String> search = db.filterFavorites();
         textView_meal_name.setText(search.toString());
+        imageView_meal_image.setImageBitmap(db.getPhoto("efasf"));
     }
 
     private void findViews() {

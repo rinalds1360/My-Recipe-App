@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/rinal/Desktop/My-Recipe-App/app/src/main/res/layout/activity_all_recipe_search.xml" value="0.25" />
+        <entry key="..\:/Users/rinal/Desktop/My-Recipe-App/app/src/main/res/layout/activity_list_recipe.xml" value="0.25" />
+        <entry key="..\:/Users/rinal/Desktop/My-Recipe-App/app/src/main/res/layout/fragment_my_account.xml" value="0.25" />
+        <entry key="..\:/Users/rinal/Desktop/My-Recipe-App/app/src/main/res/layout/fragment_my_pantry.xml" value="0.25" />
+        <entry key="..\:/Users/rinal/Desktop/My-Recipe-App/app/src/main/res/layout/fragment_save_recipes.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.207" />
         <entry key="app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.207" />

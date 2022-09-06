@@ -3,6 +3,8 @@ package com.example.myrecipeapp;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
@@ -63,6 +65,15 @@ public class Database {
             description = cursor.getString(index);
         }
         return description;
+    }
+
+    public Bitmap getPhoto(String name){
+        String query = "select photo FROM recepies where name = '"+name+"'";
+        Cursor cursor = mDB.rawQuery(query, null);
+        cursor.moveToFirst();
+        byte[] bytesImage = cursor.getBlob(0);
+        cursor.close();
+        return BitmapFactory.decodeByteArray(bytesImage,0,bytesImage.length);
     }
 
     public Cursor getIngredientsCursor(String name){
